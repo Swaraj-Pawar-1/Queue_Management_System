@@ -22,6 +22,7 @@ export default function QueueForm({onAdd}){
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text" 
+            required
             />
         </div>
         <div className="form-group">
@@ -29,6 +30,7 @@ export default function QueueForm({onAdd}){
             placeholder="Customer name"
             value={service}
             onChange={(e) => SetService(e.target.value)}
+            required
             >
             <option value="">Select Service</option>
             <option value="consultation">Consultation</option>

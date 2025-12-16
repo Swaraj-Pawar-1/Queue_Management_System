@@ -3,7 +3,7 @@ import "./App.css"
 import QueueForm from "./components/QueueForm"
 import QueueDisplay from "./components/QueueDisplay"
 export default function App(){
-  const [queue,setQueue] = useState([])
+  const [queue,setQueue] = useState([{name:"Test 1",service: "consultation",id:1,status:"waiting"}])
 
   const addToQueue = (customer) => {
    setQueue([...queue,{...customer, id:Date.now(),status: "waiting"}])
@@ -16,9 +16,9 @@ export default function App(){
   }
 
   const removeFromQueue = (id) => {
-   setQueue(queue.filter((customer) => {
+   setQueue(queue.filter((customer) => 
     customer.id !== id
-   }))
+   ))
   };
 
   return(
